@@ -5,8 +5,8 @@ import com.feather.game.Entity;
 import com.feather.game.WorldObject;
 import com.feather.game.WorldTile;
 import com.feather.game.player.Player;
-import com.feather.game.player.controlers.Controler;
-import com.feather.game.player.controlers.Wilderness;
+import com.feather.game.player.controllers.Controller;
+import com.feather.game.player.controllers.Wilderness;
 import com.feather.game.tasks.WorldTask;
 import com.feather.game.tasks.WorldTasksManager;
 
@@ -15,7 +15,7 @@ import com.feather.game.tasks.WorldTasksManager;
  * @author Emperor
  *
  */
-public final class FfaZone extends Controler {
+public final class FfaZone extends Controller {
 
 	/**
 	 * If the FFA zone is the risk zone.

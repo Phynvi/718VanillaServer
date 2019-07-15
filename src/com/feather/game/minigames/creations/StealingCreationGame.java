@@ -2,11 +2,11 @@ package com.feather.game.minigames.creations;
 
 import com.feather.game.WorldObject;
 import com.feather.game.item.Item;
-import com.feather.game.player.content.Magic;
-import com.feather.game.player.controlers.Controler;
+import com.feather.game.player.controllers.Controller;
+import com.feather.game.player.skills.magic.Magic;
 import com.feather.net.decoders.WorldPacketsDecoder;
 
-public class StealingCreationGame extends Controler {
+public class StealingCreationGame extends Controller {
 
 	private int score, index = 0;
 

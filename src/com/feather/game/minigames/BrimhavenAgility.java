@@ -11,12 +11,12 @@ import com.feather.game.WorldObject;
 import com.feather.game.WorldTile;
 import com.feather.game.player.Player;
 import com.feather.game.player.Skills;
-import com.feather.game.player.controlers.Controler;
+import com.feather.game.player.controllers.Controller;
 import com.feather.game.tasks.WorldTask;
 import com.feather.game.tasks.WorldTasksManager;
 import com.feather.utils.Utils;
 
-public final class BrimhavenAgility extends Controler {
+public final class BrimhavenAgility extends Controller {
 
 
 	private static final List<Player> players = new ArrayList<Player>();

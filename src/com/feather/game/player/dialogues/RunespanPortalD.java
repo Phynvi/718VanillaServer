@@ -1,6 +1,6 @@
 package com.feather.game.player.dialogues;
 
-import com.feather.game.player.controlers.RunespanControler;
+import com.feather.game.player.controllers.RunespanControler;
 
 public class RunespanPortalD extends Dialogue {
 

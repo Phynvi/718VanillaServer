@@ -1,7 +1,7 @@
 package com.feather.game.player.dialogues;
 
 import com.feather.cache.parser.NPCDefinitions;
-import com.feather.game.player.controlers.TutorialIsland;
+import com.feather.game.player.controllers.TutorialIsland;
 
 public class SurvivalExpert extends Dialogue {
 

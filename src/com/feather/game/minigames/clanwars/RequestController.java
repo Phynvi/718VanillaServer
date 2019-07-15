@@ -6,14 +6,14 @@ import com.feather.game.WorldTile;
 import com.feather.game.minigames.clanwars.ClanWars.Rules;
 import com.feather.game.player.CoordsEvent;
 import com.feather.game.player.Player;
-import com.feather.game.player.controlers.Controler;
+import com.feather.game.player.controllers.Controller;
 
 /**
  * A controller subclass handling the clan wars requesting.
  * @author Emperor
  *
  */
-public final class RequestController extends Controler {
+public final class RequestController extends Controller {
 
 	@Override
 	public void start() {

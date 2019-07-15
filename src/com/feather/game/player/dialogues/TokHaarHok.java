@@ -4,7 +4,7 @@ import java.util.TimerTask;
 
 import com.feather.cores.CoresManager;
 import com.feather.game.WorldTile;
-import com.feather.game.player.controlers.FightKiln;
+import com.feather.game.player.controllers.FightKiln;
 import com.feather.game.player.cutscenes.Cutscene;
 import com.feather.utils.Logger;
 

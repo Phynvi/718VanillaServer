@@ -1,7 +1,7 @@
 package com.feather.game.player.dialogues;
 
 import com.feather.game.player.QuestManager.Quests;
-import com.feather.game.player.controlers.NomadsRequiem;
+import com.feather.game.player.controllers.NomadsRequiem;
 
 public class NomadThrone extends Dialogue {
 

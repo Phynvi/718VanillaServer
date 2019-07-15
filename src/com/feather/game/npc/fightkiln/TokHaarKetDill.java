@@ -5,7 +5,7 @@ import com.feather.game.Hit;
 import com.feather.game.WorldTile;
 import com.feather.game.Hit.HitLook;
 import com.feather.game.player.Player;
-import com.feather.game.player.controlers.FightKiln;
+import com.feather.game.player.controllers.FightKiln;
 
 @SuppressWarnings("serial")
 public class TokHaarKetDill extends FightKilnNPC {

@@ -20,9 +20,9 @@ import com.feather.game.item.Item;
 import com.feather.game.npc.NPC;
 import com.feather.game.player.Inventory;
 import com.feather.game.player.actions.Summoning.Pouches;
-import com.feather.game.player.content.Pots;
-import com.feather.game.player.content.Foods.Food;
-import com.feather.game.player.controlers.Controler;
+import com.feather.game.player.controllers.Controller;
+import com.feather.game.player.skills.cooking.Foods.Food;
+import com.feather.game.player.skills.herblore.Pots;
 import com.feather.game.tasks.WorldTask;
 import com.feather.game.tasks.WorldTasksManager;
 
@@ -31,7 +31,7 @@ import com.feather.game.tasks.WorldTasksManager;
  * @author Apache ah64
  * @author Emperor
  */
-public final class RefugeOfFear extends Controler {
+public final class RefugeOfFear extends Controller {
 
 	/**
 	 * The random instance, used for randomizing values.

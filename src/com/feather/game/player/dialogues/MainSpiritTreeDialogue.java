@@ -1,6 +1,6 @@
 package com.feather.game.player.dialogues;
 
-import com.feather.game.player.content.SpiritTree;
+import com.feather.game.objects.SpiritTree;
 
 public class MainSpiritTreeDialogue extends Dialogue {
 

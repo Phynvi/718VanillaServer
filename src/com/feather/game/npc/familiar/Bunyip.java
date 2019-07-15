@@ -6,9 +6,9 @@ import com.feather.game.WorldTile;
 import com.feather.game.item.Item;
 import com.feather.game.player.Player;
 import com.feather.game.player.Skills;
-import com.feather.game.player.actions.Fishing.Fish;
 import com.feather.game.player.actions.Summoning.Pouches;
-import com.feather.game.player.content.Foods.Food;
+import com.feather.game.player.skills.cooking.Foods.Food;
+import com.feather.game.player.skills.fishing.Fishing.Fish;
 
 public class Bunyip extends Familiar {
 

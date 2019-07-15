@@ -17,7 +17,7 @@ import com.feather.game.npc.familiar.Familiar;
 import com.feather.game.npc.qbd.TorturedSoul;
 import com.feather.game.player.Player;
 import com.feather.game.player.Skills;
-import com.feather.game.player.content.Magic;
+import com.feather.game.player.skills.magic.Magic;
 import com.feather.utils.Utils;
 
 public abstract class Entity extends WorldTile {

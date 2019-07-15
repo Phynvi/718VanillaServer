@@ -2,7 +2,7 @@ package com.feather.game.player.cutscenes;
 
 import java.util.HashMap;
 
-import com.feather.game.player.content.LodeStones;
+import com.feather.game.objects.LodeStones;
 import com.feather.utils.Logger;
 
 public class CutscenesHandler {

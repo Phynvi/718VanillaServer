@@ -2,9 +2,9 @@ package com.feather.game.minigames.duel;
 
 import com.feather.game.WorldTile;
 import com.feather.game.player.Player;
-import com.feather.game.player.controlers.Controler;
+import com.feather.game.player.controllers.Controller;
 
-public class DuelControler extends Controler {
+public class DuelControler extends Controller {
 
 	@Override
 	public void start() {

@@ -11,7 +11,7 @@ import com.feather.game.WorldTile;
 import com.feather.game.npc.NPC;
 import com.feather.game.player.Player;
 import com.feather.game.player.content.FadingScreen;
-import com.feather.game.player.controlers.SorceressGarden;
+import com.feather.game.player.controllers.SorceressGarden;
 import com.feather.game.tasks.WorldTask;
 import com.feather.game.tasks.WorldTasksManager;
 

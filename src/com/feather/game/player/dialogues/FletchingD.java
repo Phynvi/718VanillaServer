@@ -1,9 +1,9 @@
 package com.feather.game.player.dialogues;
 
-import com.feather.game.player.actions.Fletching;
-import com.feather.game.player.actions.Fletching.Fletch;
 import com.feather.game.player.content.SkillsDialogue;
 import com.feather.game.player.content.SkillsDialogue.ItemNameFilter;
+import com.feather.game.player.skills.fletching.Fletching;
+import com.feather.game.player.skills.fletching.Fletching.Fletch;
 
 public class FletchingD extends Dialogue {
 

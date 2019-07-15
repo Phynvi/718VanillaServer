@@ -7,6 +7,7 @@ import com.feather.game.World;
 import com.feather.game.WorldTile;
 import com.feather.game.npc.NPC;
 import com.feather.game.player.Player;
+import com.feather.game.player.skills.magic.Magic;
 import com.feather.game.tasks.WorldTask;
 import com.feather.game.tasks.WorldTasksManager;
 import com.feather.utils.Utils;

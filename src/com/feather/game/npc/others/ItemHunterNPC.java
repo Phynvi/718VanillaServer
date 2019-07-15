@@ -9,9 +9,9 @@ import com.feather.game.npc.NPC;
 import com.feather.game.player.OwnedObjectManager;
 import com.feather.game.player.Player;
 import com.feather.game.player.OwnedObjectManager.ConvertEvent;
-import com.feather.game.player.actions.BoxAction.HunterNPC;
-import com.feather.game.player.content.Hunter;
-import com.feather.game.player.content.Hunter.DynamicFormula;
+import com.feather.game.player.skills.hunter.Hunter;
+import com.feather.game.player.skills.hunter.BoxAction.HunterNPC;
+import com.feather.game.player.skills.hunter.Hunter.DynamicFormula;
 import com.feather.utils.Utils;
 
 @SuppressWarnings("serial")

@@ -26,7 +26,7 @@ import com.feather.game.player.Equipment;
 import com.feather.game.player.Player;
 import com.feather.game.player.Skills;
 import com.feather.game.player.content.Combat;
-import com.feather.game.player.content.Magic;
+import com.feather.game.player.skills.magic.Magic;
 import com.feather.game.tasks.WorldTask;
 import com.feather.game.tasks.WorldTasksManager;
 import com.feather.utils.MapAreas;

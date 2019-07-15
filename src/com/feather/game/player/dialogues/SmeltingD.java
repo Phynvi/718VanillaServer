@@ -2,10 +2,10 @@ package com.feather.game.player.dialogues;
 
 import com.feather.game.WorldObject;
 import com.feather.game.player.Skills;
-import com.feather.game.player.actions.Smelting;
-import com.feather.game.player.actions.Smelting.SmeltingBar;
 import com.feather.game.player.content.SkillsDialogue;
 import com.feather.game.player.content.SkillsDialogue.ItemNameFilter;
+import com.feather.game.player.skills.smithing.Smelting;
+import com.feather.game.player.skills.smithing.Smelting.SmeltingBar;
 
 public class SmeltingD extends Dialogue {
 

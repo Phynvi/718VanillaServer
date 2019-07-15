@@ -9,6 +9,7 @@ import org.jboss.netty.channel.ChannelFutureListener;
 import com.feather.game.player.Player;
 import com.feather.io.OutputStream;
 import com.feather.net.Session;
+import com.feather.net.packets.LoginResponsePacket;
 
 public final class LoginPacketsEncoder extends Encoder {
 
@@ -22,9 +23,9 @@ public final class LoginPacketsEncoder extends Encoder {
 		session.write(stream);
 	}
 
-	public final void sendClientPacket(int opcode) {
+	public final void sendClientPacket(LoginResponsePacket opcode) {
 		OutputStream stream = new OutputStream(1);
-		stream.writeByte(opcode);
+		stream.writeByte(opcode.getValue());
 		ChannelFuture future = session.write(stream);
 		if (future != null) {
 			future.addListener(ChannelFutureListener.CLOSE);
@@ -36,7 +37,7 @@ public final class LoginPacketsEncoder extends Encoder {
 	public void sendLobbyDetails(Player player) {
 		int ipHash = 0;
 		OutputStream stream = new OutputStream();
-		stream.writePacketVarByte(player, 2);
+		stream.writePacketVarByte(player, LoginResponsePacket.SUCCESFUL.getValue());
 		stream.writeByte(player.getRights());//rights
 		stream.writeByte(0);
 		stream.writeByte(0);
@@ -74,7 +75,7 @@ public final class LoginPacketsEncoder extends Encoder {
 
 	public final void sendLoginDetails(Player player) {
 		OutputStream stream = new OutputStream();
-		stream.writePacketVarByte(player, 2);
+		stream.writePacketVarByte(player, LoginResponsePacket.SUCCESFUL.getValue());
 		stream.writeByte(player.getRights());
 		stream.writeByte(0);
 		stream.writeByte(0);

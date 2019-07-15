@@ -8,17 +8,17 @@ import com.feather.game.WorldObject;
 import com.feather.game.WorldTile;
 import com.feather.game.item.Item;
 import com.feather.game.npc.NPC;
-import com.feather.game.player.content.Foods.Food;
-import com.feather.game.player.content.Pots.Pot;
-import com.feather.game.player.controlers.Controler;
-import com.feather.game.player.controlers.ControlerHandler;
+import com.feather.game.player.controllers.Controller;
+import com.feather.game.player.controllers.ControllerHandler;
+import com.feather.game.player.skills.cooking.Foods.Food;
+import com.feather.game.player.skills.herblore.Pots.Pot;
 
 public final class ControlerManager implements Serializable {
 
 	private static final long serialVersionUID = 2084691334731830796L;
 
 	private transient Player player;
-	private transient Controler controler;
+	private transient Controller controler;
 	private transient boolean inited;
 	private Object[] lastControlerArguments;
 
@@ -32,14 +32,14 @@ public final class ControlerManager implements Serializable {
 		this.player = player;
 	}
 
-	public Controler getControler() {
+	public Controller getControler() {
 		return controler;
 	}
 	
 	public void startControler(Object key, Object... parameters) {
 		if (controler != null)
 			forceStop();
-		controler = (Controler) (key instanceof Controler ? key : ControlerHandler.getControler(key));
+		controler = (Controller) (key instanceof Controller ? key : ControllerHandler.getControler(key));
 		if (controler == null)
 			return;
 		controler.setPlayer(player);
@@ -52,7 +52,7 @@ public final class ControlerManager implements Serializable {
 	public void login() {
 		if (lastControler == null)
 			return;
-		controler = ControlerHandler.getControler(lastControler);
+		controler = ControllerHandler.getControler(lastControler);
 		if (controler == null) {
 			forceStop();
 			return;

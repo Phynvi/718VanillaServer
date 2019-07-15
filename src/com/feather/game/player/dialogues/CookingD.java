@@ -1,9 +1,9 @@
 package com.feather.game.player.dialogues;
 
 import com.feather.game.WorldObject;
-import com.feather.game.player.actions.Cooking;
-import com.feather.game.player.actions.Cooking.Cookables;
 import com.feather.game.player.content.SkillsDialogue;
+import com.feather.game.player.skills.cooking.Cooking;
+import com.feather.game.player.skills.cooking.Cooking.Cookables;
 
 public class CookingD extends Dialogue {
 

@@ -11,16 +11,16 @@ import com.feather.game.item.Item;
 import com.feather.game.player.Player;
 import com.feather.game.player.actions.PlayerCombat;
 import com.feather.game.player.content.ItemConstants;
-import com.feather.game.player.content.Foods.Food;
-import com.feather.game.player.content.Pots.Pot;
-import com.feather.game.player.controlers.Controler;
+import com.feather.game.player.controllers.Controller;
+import com.feather.game.player.skills.cooking.Foods.Food;
+import com.feather.game.player.skills.herblore.Pots.Pot;
 import com.feather.game.tasks.WorldTask;
 import com.feather.game.tasks.WorldTasksManager;
 import com.feather.net.decoders.WorldPacketsDecoder;
 import com.feather.net.decoders.handlers.ButtonHandler;
 import com.feather.utils.Utils;
 
-public class DuelArena extends Controler {
+public class DuelArena extends Controller {
 
 	private Player target;
 	private boolean ifFriendly, isDueling;
@@ -104,7 +104,7 @@ public class DuelArena extends Controler {
 			removeEquipment();
 			beginBattle(started);
 		}
-		Controler controler = oldTarget.getControlerManager().getControler();
+		Controller controler = oldTarget.getControlerManager().getControler();
 		if (controler == null)
 			return;
 		DuelArena targetConfiguration = (DuelArena) controler;

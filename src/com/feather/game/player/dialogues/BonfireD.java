@@ -1,9 +1,9 @@
 package com.feather.game.player.dialogues;
 
 import com.feather.game.WorldObject;
-import com.feather.game.player.actions.Bonfire;
-import com.feather.game.player.actions.Bonfire.Log;
 import com.feather.game.player.content.SkillsDialogue;
+import com.feather.game.player.skills.firemaking.Bonfire;
+import com.feather.game.player.skills.firemaking.Bonfire.Log;
 
 public class BonfireD extends Dialogue {
 

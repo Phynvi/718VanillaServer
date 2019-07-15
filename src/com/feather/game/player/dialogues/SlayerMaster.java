@@ -1,9 +1,9 @@
 package com.feather.game.player.dialogues;
 
 import com.feather.cache.parser.NPCDefinitions;
-import com.feather.game.player.actions.Slayer;
-import com.feather.game.player.actions.Slayer.Master;
-import com.feather.game.player.actions.Slayer.SlayerTask;
+import com.feather.game.player.skills.slayer.Slayer;
+import com.feather.game.player.skills.slayer.Slayer.Master;
+import com.feather.game.player.skills.slayer.Slayer.SlayerTask;
 import com.feather.utils.ShopsHandler;
 
 public class SlayerMaster extends Dialogue {

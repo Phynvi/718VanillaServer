@@ -7,7 +7,7 @@ import com.feather.game.Entity;
 import com.feather.game.Graphics;
 import com.feather.game.WorldTile;
 import com.feather.game.npc.NPC;
-import com.feather.game.player.controlers.FightKiln;
+import com.feather.game.player.controllers.FightKiln;
 import com.feather.utils.Utils;
 
 @SuppressWarnings("serial")

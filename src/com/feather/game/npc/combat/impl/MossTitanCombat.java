@@ -8,7 +8,7 @@ import com.feather.game.npc.NPC;
 import com.feather.game.npc.combat.CombatScript;
 import com.feather.game.npc.combat.NPCCombatDefinitions;
 import com.feather.game.npc.familiar.Familiar;
-import com.feather.game.player.controlers.Wilderness;
+import com.feather.game.player.controllers.Wilderness;
 import com.feather.utils.Utils;
 
 public class MossTitanCombat extends CombatScript {

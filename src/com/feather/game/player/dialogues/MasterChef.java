@@ -1,6 +1,6 @@
 package com.feather.game.player.dialogues;
 
-import com.feather.game.player.controlers.TutorialIsland;
+import com.feather.game.player.controllers.TutorialIsland;
 
 public class MasterChef extends Dialogue {
 

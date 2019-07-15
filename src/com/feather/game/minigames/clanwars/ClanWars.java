@@ -11,7 +11,7 @@ import com.feather.game.RegionBuilder;
 import com.feather.game.WorldObject;
 import com.feather.game.WorldTile;
 import com.feather.game.player.Player;
-import com.feather.game.player.content.FriendChatsManager;
+import com.feather.game.player.chat.FriendChatsManager;
 
 /**
  * Handles the clan wars activity.

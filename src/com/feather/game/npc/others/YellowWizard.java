@@ -3,7 +3,7 @@ package com.feather.game.npc.others;
 import com.feather.game.WorldTile;
 import com.feather.game.npc.NPC;
 import com.feather.game.player.Player;
-import com.feather.game.player.controlers.RunespanControler;
+import com.feather.game.player.controllers.RunespanControler;
 import com.feather.utils.Utils;
 
 @SuppressWarnings("serial")

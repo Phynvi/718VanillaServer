@@ -1,7 +1,7 @@
 package com.feather.game.player.dialogues;
 
 import com.feather.cache.parser.NPCDefinitions;
-import com.feather.game.player.controlers.NewHomeControler;
+import com.feather.game.player.controllers.NewHomeControler;
 
 public class NewHomeGuide extends Dialogue {
 

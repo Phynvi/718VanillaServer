@@ -17,20 +17,20 @@ import com.feather.game.player.CoordsEvent;
 import com.feather.game.player.Inventory;
 import com.feather.game.player.LendingManager;
 import com.feather.game.player.Player;
-import com.feather.game.player.PublicChatMessage;
-import com.feather.game.player.QuickChatMessage;
 import com.feather.game.player.Skills;
 import com.feather.game.player.actions.PlayerCombat;
 import com.feather.game.player.actions.PlayerFollow;
 import com.feather.game.player.actions.Summoning;
+import com.feather.game.player.chat.FriendChatsManager;
+import com.feather.game.player.chat.PublicChatMessage;
+import com.feather.game.player.chat.QuickChatMessage;
 import com.feather.game.player.content.Commands;
-import com.feather.game.player.content.FriendChatsManager;
 import com.feather.game.player.content.Lend;
-import com.feather.game.player.content.Magic;
 import com.feather.game.player.content.Shop;
 import com.feather.game.player.content.SkillCapeCustomizer;
 import com.feather.game.player.content.Vote;
 import com.feather.game.player.content.Notes.Note;
+import com.feather.game.player.skills.magic.Magic;
 import com.feather.io.InputStream;
 import com.feather.io.OutputStream;
 import com.feather.net.Session;
@@ -63,6 +63,7 @@ public final class WorldPacketsDecoder extends Decoder {
 	public final static int ACTION_BUTTON9_PACKET = 27;
 	public final static int WORLD_MAP_CLICK = 38;
 	private final static int WORLD_LIST_UPDATE = 87;
+	//
 	private final static int LOBBY_MAIN_CLICK_PACKET = 91;
 	private final static int LOBBY_FRIEND_CHAT_SETTINGS = 79;
 	public final static int ACTION_BUTTON10_PACKET = 96;
@@ -117,6 +118,7 @@ public final class WorldPacketsDecoder extends Decoder {
 	private static final int NPC_EXAMINE_PACKET = 9;
 	private final static int REPORT_ABUSE_PACKET = -1;
 	private final static int JOIN_CLAN_CHAT_PACKET = 133;
+	
 
 	static {
 		loadPacketSizes();

@@ -5,6 +5,7 @@ import java.util.Random;
 import com.feather.game.Animation;
 import com.feather.game.Graphics;
 import com.feather.game.player.Player;
+import com.feather.game.player.chat.FriendChatsManager;
 import com.feather.game.tasks.WorldTask;
 import com.feather.game.tasks.WorldTasksManager;
 

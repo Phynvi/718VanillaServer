@@ -1,14 +1,14 @@
 package com.feather.game.minigames.creations;
 
 import com.feather.game.WorldTile;
-import com.feather.game.player.controlers.Controler;
+import com.feather.game.player.controllers.Controller;
 
 /**
  * @author Richard
  * @author Khaled
  *
  */
-public class StealingCreationLobby extends Controler {
+public class StealingCreationLobby extends Controller {
 
 	@Override
 	public void start() {

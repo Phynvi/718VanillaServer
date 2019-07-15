@@ -14,9 +14,9 @@ import com.feather.game.item.Item;
 import com.feather.game.npc.others.CastleWarBarricade;
 import com.feather.game.player.Equipment;
 import com.feather.game.player.Player;
-import com.feather.game.player.content.Foods.Food;
-import com.feather.game.player.controlers.castlewars.CastleWarsPlaying;
+import com.feather.game.player.controllers.castlewars.CastleWarsPlaying;
 import com.feather.game.player.dialogues.CastleWarsScoreboard;
+import com.feather.game.player.skills.cooking.Foods.Food;
 import com.feather.game.tasks.WorldTask;
 import com.feather.game.tasks.WorldTasksManager;
 

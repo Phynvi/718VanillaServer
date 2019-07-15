@@ -5,8 +5,8 @@ import java.util.List;
 
 import com.feather.game.WorldTile;
 import com.feather.game.player.Player;
-import com.feather.game.player.controlers.Controler;
-import com.feather.game.player.controlers.CrucibleControler;
+import com.feather.game.player.controllers.Controller;
+import com.feather.game.player.controllers.CrucibleControler;
 import com.feather.utils.Utils;
 
 public class Crucible {
@@ -83,7 +83,7 @@ public class Crucible {
 	}
 	
 	public static CrucibleControler getControler(Player player) {
-		Controler controler = player.getControlerManager().getControler();
+		Controller controler = player.getControlerManager().getControler();
 		return (CrucibleControler) (controler instanceof CrucibleControler ? controler : null);
 	}
 	

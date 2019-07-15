@@ -3,7 +3,7 @@ package com.feather.game.player.content.dungeons;
 
 import com.feather.game.player.Player;
 import com.feather.game.player.Skills;
-import com.feather.game.player.content.Magic;
+import com.feather.game.player.skills.magic.Magic;
 
 public class ResourceDungeons {
 

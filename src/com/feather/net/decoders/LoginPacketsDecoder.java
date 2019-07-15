@@ -6,6 +6,7 @@ import com.feather.game.World;
 import com.feather.game.player.Player;
 import com.feather.io.InputStream;
 import com.feather.net.Session;
+import com.feather.net.packets.LoginResponsePacket;
 import com.feather.utils.AntiFlood;
 import com.feather.utils.IsaacKeyPair;
 import com.feather.utils.Logger;
@@ -24,7 +25,7 @@ public final class LoginPacketsDecoder extends Decoder {
 		session.setDecoder(-1);
 		int packetId = stream.readUnsignedByte();
 		if (World.exiting_start != 0) {
-			session.getLoginPackets().sendClientPacket(14);
+			session.getLoginPackets().sendClientPacket(LoginResponsePacket.UPDATING);
 			return;
 		}
 		int packetSize = stream.readUnsignedShort();
@@ -35,7 +36,7 @@ public final class LoginPacketsDecoder extends Decoder {
 		int revision = stream.readInt();
 		int sub = stream.readInt();
 		if (revision != Settings.CLIENT_BUILD || sub != Settings.CUSTOM_CLIENT_BUILD) {
-			session.getLoginPackets().sendClientPacket(6);
+			session.getLoginPackets().sendClientPacket(LoginResponsePacket.UPDATED);
 			return;
 		}
 		if (packetId == 16 || packetId == 18) { // 16 world login
@@ -86,7 +87,7 @@ public final class LoginPacketsDecoder extends Decoder {
 
 				String password = securePayload.readString();
 				if (password.length() > 30 || password.length() < 3) {
-					session.getLoginPackets().sendClientPacket(3);
+					session.getLoginPackets().sendClientPacket(LoginResponsePacket.INVALID_CREDENTIALS);
 					return;
 				}
 				;
@@ -124,19 +125,19 @@ public final class LoginPacketsDecoder extends Decoder {
 					serverKeys[i] = key[i] + 50;
 
 				if (Utils.invalidAccountName(username)) {
-					session.getLoginPackets().sendClientPacket(3);
+					session.getLoginPackets().sendClientPacket(LoginResponsePacket.INVALID_CREDENTIALS);
 					return;
 				}
 				if (World.getPlayers().size() >= Settings.PLAYERS_LIMIT - 10) {
-					session.getLoginPackets().sendClientPacket(7);
+					session.getLoginPackets().sendClientPacket(LoginResponsePacket.WORLD_FULL);
 					return;
 				}
 				if (World.containsPlayer(username) || World.containsLobbyPlayer(username)) {
-					session.getLoginPackets().sendClientPacket(5);
+					session.getLoginPackets().sendClientPacket(LoginResponsePacket.ALREADY_ONLINE);
 					return;
 				}
 				if (AntiFlood.getSessionsIP(session.getIP()) > 2) {
-					session.getLoginPackets().sendClientPacket(9);
+					session.getLoginPackets().sendClientPacket(LoginResponsePacket.LOGIN_LIMIT_EXCEEDED);
 					return;
 				}
 				Player player;
@@ -145,20 +146,20 @@ public final class LoginPacketsDecoder extends Decoder {
 				} else {
 					player = SerializableFilesManager.loadPlayer(username);
 					if (player == null) {
-						session.getLoginPackets().sendClientPacket(20);
+						session.getLoginPackets().sendClientPacket(LoginResponsePacket.ERROR_LOADING_PROFILE);
 						return;
 					}
 					if (!SerializableFilesManager.createBackup(username)) {
-						session.getLoginPackets().sendClientPacket(20);
+						session.getLoginPackets().sendClientPacket(LoginResponsePacket.ERROR_LOADING_PROFILE);
 						return;
 					}
 					if (!password.equals(player.getPassword())) {
-						session.getLoginPackets().sendClientPacket(3);
+						session.getLoginPackets().sendClientPacket(LoginResponsePacket.INVALID_CREDENTIALS);
 						return;
 					}
 				}
 				if (player.isPermBanned() || player.getBanned() > Utils.currentTimeMillis()) {
-					session.getLoginPackets().sendClientPacket(4);
+					session.getLoginPackets().sendClientPacket(LoginResponsePacket.ACCOUNT_DISABLED);
 					return;
 				}
 				player.init(session, username, new IsaacKeyPair(key));
@@ -176,14 +177,14 @@ public final class LoginPacketsDecoder extends Decoder {
 		stream.readUnsignedByte();
 		int rsaBlockSize = stream.readUnsignedShort();
 		if (rsaBlockSize > stream.getRemaining()) {
-			session.getLoginPackets().sendClientPacket(10);
+			session.getLoginPackets().sendClientPacket(LoginResponsePacket.BAD_SESSION_ID);
 			return;
 		}
 		byte[] data = new byte[rsaBlockSize];
 		stream.readBytes(data, 0, rsaBlockSize);
 		InputStream rsaStream = new InputStream(Utils.cryptRSA(data, Settings.PRIVATE_EXPONENT, Settings.MODULUS));
 		if (rsaStream.readUnsignedByte() != 10) {
-			session.getLoginPackets().sendClientPacket(10);
+			session.getLoginPackets().sendClientPacket(LoginResponsePacket.BAD_SESSION_ID);
 			return;
 		}
 		int[] isaacKeys = new int[4];
@@ -191,12 +192,12 @@ public final class LoginPacketsDecoder extends Decoder {
 			isaacKeys[i] = rsaStream.readInt();
 		}
 		if (rsaStream.readLong() != 0L) { // rsa block check, pass part
-			session.getLoginPackets().sendClientPacket(10);
+			session.getLoginPackets().sendClientPacket(LoginResponsePacket.BAD_SESSION_ID);
 			return;
 		}
 		String password = rsaStream.readString();
 		if (password.length() > 30 || password.length() < 3) {
-			session.getLoginPackets().sendClientPacket(3);
+			session.getLoginPackets().sendClientPacket(LoginResponsePacket.INVALID_CREDENTIALS);
 			return;
 		}
 		;
@@ -232,24 +233,24 @@ public final class LoginPacketsDecoder extends Decoder {
 			int crc = Cache.STORE.getIndexes()[index] == null ? -1011863738 : Cache.STORE.getIndexes()[index].getCRC();
 			int receivedCRC = stream.readInt();
 			if (crc != receivedCRC && index < 32) {
-				session.getLoginPackets().sendClientPacket(6);
+				session.getLoginPackets().sendClientPacket(LoginResponsePacket.UPDATED);
 				return;
 			}
 		}
 		if (Utils.invalidAccountName(username)) {
-			session.getLoginPackets().sendClientPacket(3);
+			session.getLoginPackets().sendClientPacket(LoginResponsePacket.INVALID_CREDENTIALS);
 			return;
 		}
 		if (World.getPlayers().size() >= Settings.PLAYERS_LIMIT - 10) {
-			session.getLoginPackets().sendClientPacket(7);
+			session.getLoginPackets().sendClientPacket(LoginResponsePacket.WORLD_FULL);
 			return;
 		}
 		if (World.containsPlayer(username)) {
-			session.getLoginPackets().sendClientPacket(5);
+			session.getLoginPackets().sendClientPacket(LoginResponsePacket.ALREADY_ONLINE);
 			return;
 		}
 //		if (AntiFlood.getSessionsIP(session.getIP()) > 3) {
-//			session.getLoginPackets().sendClientPacket(9);
+//			session.getLoginPackets().sendClientPacket(Packets.LOGIN_LIMIT_EXCEEDED_PACKET);
 //			return;
 //		}
 		Player player;
@@ -258,20 +259,20 @@ public final class LoginPacketsDecoder extends Decoder {
 		} else {
 			player = SerializableFilesManager.loadPlayer(username);
 			if (player == null) {
-				session.getLoginPackets().sendClientPacket(20);
+				session.getLoginPackets().sendClientPacket(LoginResponsePacket.INVALID_LOGIN_SERVER);
 				return;
 			}
 			if (!SerializableFilesManager.createBackup(username)) {
-				session.getLoginPackets().sendClientPacket(20);
+				session.getLoginPackets().sendClientPacket(LoginResponsePacket.INVALID_LOGIN_SERVER);
 				return;
 			}
 			if (!password.equals(player.getPassword())) {
-				session.getLoginPackets().sendClientPacket(3);
+				session.getLoginPackets().sendClientPacket(LoginResponsePacket.INVALID_CREDENTIALS);
 				return;
 			}
 		}
 		if (player.isPermBanned() || player.getBanned() > Utils.currentTimeMillis()) {
-			session.getLoginPackets().sendClientPacket(4);
+			session.getLoginPackets().sendClientPacket(LoginResponsePacket.ACCOUNT_DISABLED);
 			return;
 		}
 		Player temp = World.getLobbyPlayerByDisplayName(username);

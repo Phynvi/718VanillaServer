@@ -6,7 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.feather.game.World;
-import com.feather.game.player.content.FriendChatsManager;
+import com.feather.game.player.chat.FriendChatsManager;
+import com.feather.game.player.chat.QuickChatMessage;
 import com.feather.net.decoders.WorldPacketsDecoder;
 import com.feather.utils.Utils;
 

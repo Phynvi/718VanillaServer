@@ -1,7 +1,7 @@
 package com.feather.game.player.dialogues;
 
 import com.feather.cache.parser.NPCDefinitions;
-import com.feather.game.player.controlers.StartTutorial;
+import com.feather.game.player.controllers.StartTutorial;
 
 public class QuestGuide extends Dialogue {
 

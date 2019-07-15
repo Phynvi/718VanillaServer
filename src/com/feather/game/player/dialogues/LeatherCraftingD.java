@@ -1,8 +1,8 @@
 package com.feather.game.player.dialogues;
 
-import com.feather.game.player.actions.LeatherCrafting;
-import com.feather.game.player.actions.LeatherCrafting.LeatherData;
 import com.feather.game.player.content.SkillsDialogue;
+import com.feather.game.player.skills.crafting.LeatherCrafting;
+import com.feather.game.player.skills.crafting.LeatherCrafting.LeatherData;
 
 public class LeatherCraftingD extends Dialogue {
 

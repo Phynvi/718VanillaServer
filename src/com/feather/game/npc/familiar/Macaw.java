@@ -6,8 +6,8 @@ import com.feather.game.World;
 import com.feather.game.WorldTile;
 import com.feather.game.item.Item;
 import com.feather.game.player.Player;
-import com.feather.game.player.actions.HerbCleaning.Herbs;
 import com.feather.game.player.actions.Summoning.Pouches;
+import com.feather.game.player.skills.herblore.HerbCleaning.Herbs;
 import com.feather.utils.Utils;
 
 public class Macaw extends Familiar {

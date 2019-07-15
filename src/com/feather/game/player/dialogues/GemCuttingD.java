@@ -1,8 +1,8 @@
 package com.feather.game.player.dialogues;
 
-import com.feather.game.player.actions.GemCutting;
-import com.feather.game.player.actions.GemCutting.Gem;
 import com.feather.game.player.content.SkillsDialogue;
+import com.feather.game.player.skills.crafting.GemCutting;
+import com.feather.game.player.skills.crafting.GemCutting.Gem;
 
 public class GemCuttingD extends Dialogue {
 

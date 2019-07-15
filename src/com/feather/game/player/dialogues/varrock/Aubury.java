@@ -8,8 +8,8 @@ import com.feather.game.World;
 import com.feather.game.WorldTile;
 import com.feather.game.npc.NPC;
 import com.feather.game.player.Player;
-import com.feather.game.player.content.Magic;
 import com.feather.game.player.dialogues.Dialogue;
+import com.feather.game.player.skills.magic.Magic;
 import com.feather.utils.ShopsHandler;
 
 

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.feather.game.player.Player;
-import com.feather.game.player.content.FriendChatsManager;
+import com.feather.game.player.chat.FriendChatsManager;
 import com.feather.game.player.content.Highscores;
 
 

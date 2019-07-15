@@ -2,7 +2,7 @@ package com.feather.game.player.dialogues;
 
 import com.feather.game.WorldTile;
 import com.feather.game.item.Item;
-import com.feather.game.player.content.Magic;
+import com.feather.game.player.skills.magic.Magic;
 
 public class Transportation extends Dialogue {
 

@@ -37,7 +37,7 @@ import com.feather.game.player.Player;
 import com.feather.game.player.Skills;
 import com.feather.game.player.content.Notes.Note;
 import com.feather.game.player.content.pet.Pets;
-import com.feather.game.player.controlers.FightKiln;
+import com.feather.game.player.controllers.FightKiln;
 import com.feather.game.player.cutscenes.HomeCutScene;
 import com.feather.game.player.dialogues.Dialogue;
 import com.feather.game.player.dialogues.quests.CooksAssistant;

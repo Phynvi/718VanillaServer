@@ -11,8 +11,8 @@ import com.feather.game.npc.combat.NPCCombatDefinitions;
 import com.feather.game.npc.nomad.FlameVortex;
 import com.feather.game.npc.nomad.Nomad;
 import com.feather.game.player.Player;
-import com.feather.game.player.content.Magic;
 import com.feather.game.player.dialogues.Dialogue;
+import com.feather.game.player.skills.magic.Magic;
 import com.feather.game.tasks.WorldTask;
 import com.feather.game.tasks.WorldTasksManager;
 

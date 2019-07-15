@@ -5,9 +5,9 @@ import com.feather.cache.parser.NPCDefinitions;
 import com.feather.game.WorldTile;
 import com.feather.game.minigames.CastleWars;
 import com.feather.game.player.Skills;
-import com.feather.game.player.content.Magic;
-import com.feather.game.player.controlers.FightCaves;
-import com.feather.game.player.controlers.FightKiln;
+import com.feather.game.player.controllers.FightCaves;
+import com.feather.game.player.controllers.FightKiln;
+import com.feather.game.player.skills.magic.Magic;
 
 public class MrEx extends Dialogue {
 

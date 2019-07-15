@@ -1,8 +1,8 @@
 package com.feather.game.minigames;
 
-import com.feather.game.player.controlers.Controler;
+import com.feather.game.player.controllers.Controller;
 
-public class PuroPuro extends Controler {
+public class PuroPuro extends Controller {
 
 	@Override
 	public void start() {

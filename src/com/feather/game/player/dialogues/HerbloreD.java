@@ -1,8 +1,8 @@
 package com.feather.game.player.dialogues;
 
 import com.feather.game.item.Item;
-import com.feather.game.player.actions.Herblore;
 import com.feather.game.player.content.SkillsDialogue;
+import com.feather.game.player.skills.herblore.Herblore;
 
 public class HerbloreD extends Dialogue {
 

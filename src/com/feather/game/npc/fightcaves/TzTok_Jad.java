@@ -5,7 +5,7 @@ import com.feather.game.Entity;
 import com.feather.game.Graphics;
 import com.feather.game.WorldTile;
 import com.feather.game.npc.combat.NPCCombatDefinitions;
-import com.feather.game.player.controlers.FightCaves;
+import com.feather.game.player.controllers.FightCaves;
 import com.feather.game.tasks.WorldTask;
 import com.feather.game.tasks.WorldTasksManager;
 
