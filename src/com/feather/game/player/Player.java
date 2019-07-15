@@ -66,6 +66,7 @@ import com.feather.net.Session;
 import com.feather.net.decoders.WorldPacketsDecoder;
 import com.feather.net.decoders.handlers.ButtonHandler;
 import com.feather.net.encoders.WorldPacketsEncoder;
+import com.feather.net.packets.LogicPacket;
 import com.feather.utils.IsaacKeyPair;
 import com.feather.utils.Logger;
 import com.feather.utils.MachineInformation;

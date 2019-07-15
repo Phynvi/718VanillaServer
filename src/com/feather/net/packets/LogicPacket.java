@@ -1,4 +1,4 @@
-package com.feather.game.player;
+package com.feather.net.packets;
 
 import com.feather.io.InputStream;
 

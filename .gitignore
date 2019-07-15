@@ -1,2 +1,2 @@
-/data/cache/
-/bin/
+data/cache/*.*
+bin/*.*
