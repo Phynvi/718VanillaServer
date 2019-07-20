@@ -2638,6 +2638,10 @@ public class Player extends Entity {
 	}
 
 	public void addLogicPacketToQueue(LogicPacket packet) {
+		if(packet == null || logicPackets == null) {
+			return;
+		}
+		
 		for (LogicPacket p : logicPackets) {
 			if (p.getId() == packet.getId()) {
 				logicPackets.remove(p);
@@ -3248,5 +3252,21 @@ public class Player extends Entity {
 	
 	public boolean[] getActivatedLodestones() {
 		return activatedLodestones;
+	}
+	
+	public boolean isFrozen() {
+		if(getFreezeDelay() >= Utils.currentTimeMillis()) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public boolean isLockDelayed() {
+		if(getLockDelay() >= Utils.currentTimeMillis()) {
+			return true;
+		}
+		
+		return false;
 	}
 }

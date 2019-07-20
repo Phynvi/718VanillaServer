@@ -50,18 +50,22 @@ public final class ControlerManager implements Serializable {
 	}
 
 	public void login() {
-		if (lastControler == null)
+		if (lastControler == null) {
 			return;
+		}
+		
 		controler = ControllerHandler.getControler(lastControler);
 		if (controler == null) {
 			forceStop();
 			return;
 		}
+		
 		controler.setPlayer(player);
-		if (controler.login())
+		if (controler.login()) {
 			forceStop();
-		else
+		} else {
 			inited = true;
+		}
 	}
 
 	public void logout() {

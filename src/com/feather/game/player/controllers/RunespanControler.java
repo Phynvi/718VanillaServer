@@ -503,8 +503,9 @@ public class RunespanControler extends Controller {
 	 * @return points.
 	 */
 	public int getRunespanInventoryPoints() {
-		if (getArguments() == null || getArguments().length == 0) 
+		if (getArguments() == null || getArguments().length == 0 || getArguments()[0] == null) 
 			return 0;
+		
 		return (Integer) getArguments()[0];
 	}
 	/**
