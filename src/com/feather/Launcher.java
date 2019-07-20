@@ -24,6 +24,7 @@ import com.feather.game.player.cutscenes.CutscenesHandler;
 import com.feather.game.player.dialogues.DialogueHandler;
 import com.feather.game.worldlist.WorldList;
 import com.feather.net.ServerChannelHandler;
+import com.feather.net.packets.incoming.PacketManager;
 import com.feather.utils.DTRank;
 import com.feather.utils.DisplayNames;
 import com.feather.utils.IPBanL;
@@ -98,6 +99,8 @@ public final class Launcher {
 		World.init();
 		Logger.log("Launcher", "Initing Region Builder...");
 		RegionBuilder.init();
+		Logger.log("Launcher", "Initing Packet Manager...");
+		new PacketManager();
 		Logger.log("Launcher", "Initing Server Channel Handler...");
 		try {
 			ServerChannelHandler.init();

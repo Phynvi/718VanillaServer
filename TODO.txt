@@ -1,0 +1,2 @@
+ NPC_CLICK_4_PACKET
+ NPCHandler.handleOption4
