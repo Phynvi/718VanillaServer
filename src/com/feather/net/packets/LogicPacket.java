@@ -4,16 +4,16 @@ import com.feather.io.InputStream;
 
 public class LogicPacket {
 
-	private int id;
+	private ClientPacket id;
 	byte[] data;
 
 	public LogicPacket(int id, int size, InputStream stream) {
-		this.id = id;
+		this.id = ClientPacket.getPacketFromId(id);
 		data = new byte[size];
 		stream.getBytes(data, 0, size);
 	}
 
-	public int getId() {
+	public ClientPacket getId() {
 		return id;
 	}
 
