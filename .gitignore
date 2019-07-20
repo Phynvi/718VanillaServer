@@ -1,2 +1,4 @@
-data/cache/*.*
-bin/*.*
+data/cache/*
+data/characters/*
+data/charactersBackup/*
+bin/*
