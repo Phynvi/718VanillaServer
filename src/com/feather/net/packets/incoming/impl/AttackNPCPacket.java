@@ -62,7 +62,7 @@ public class AttackNPCPacket extends AbstractLogicPacket {
 
 	@Override
 	public ClientPacket[] getHandledPackets() {
-		return new ClientPacket[] { ClientPacket.ATTACK_NPC };
+		return new ClientPacket[] { ClientPacket.ATTACK_NPC_PACKET };
 	}
 	
 }

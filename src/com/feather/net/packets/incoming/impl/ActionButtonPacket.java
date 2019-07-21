@@ -11,7 +11,7 @@ public class ActionButtonPacket extends AbstractLogicPacket {
 	
 	@Override
 	public void onPacketReceived(Player player, LogicPacket packet, InputStream stream) {
-		ButtonHandler.handleButtons(player, stream, packet.getId().getValue());
+		ButtonHandler.handleButtons(player, stream, packet.getId().getID());
 	}
 	
 	@Override

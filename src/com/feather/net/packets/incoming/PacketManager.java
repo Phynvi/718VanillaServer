@@ -126,7 +126,7 @@ public final class PacketManager {
 	
 	public static void handleLogicPacket(Player player, LogicPacket packet) {
 		for (Map.Entry<ClientPacket, Integer> entry : packet_map.entrySet()) {
-		    if(entry.getKey().getValue() == packet.getId().getValue()) {
+		    if(entry.getKey().getID() == packet.getId().getID()) {
 		    	AbstractPacket ap = packet_handlers[entry.getValue()];
 		    	
 		    	if(ap == null) {

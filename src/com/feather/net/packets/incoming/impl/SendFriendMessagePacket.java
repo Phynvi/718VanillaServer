@@ -33,7 +33,7 @@ public class SendFriendMessagePacket extends AbstractLogicPacket {
 
 	@Override
 	public ClientPacket[] getHandledPackets() {
-		return new ClientPacket[] { ClientPacket.SEND_FRIEND_MESSAGE_PACKET };
+		return new ClientPacket[] { ClientPacket.PERSONAL_MESSAGE_PACKET };
 	}
 	
 	

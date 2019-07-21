@@ -25,7 +25,7 @@ public class DeveloperConsolePacket extends AbstractLogicPacket {
 
 	@Override
 	public ClientPacket[] getHandledPackets() {
-		return new ClientPacket[] { ClientPacket.COMMANDS_PACKET };
+		return new ClientPacket[] { ClientPacket.DEVELOPER_CONSOLE_PACKET };
 	}
 	
 }

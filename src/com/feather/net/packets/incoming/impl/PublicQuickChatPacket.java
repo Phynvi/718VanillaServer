@@ -43,7 +43,7 @@ public class PublicQuickChatPacket extends AbstractLogicPacket {
 
 	@Override
 	public ClientPacket[] getHandledPackets() {
-		return new ClientPacket[] { ClientPacket.PUBLIC_QUICK_CHAT_PACKET };
+		return new ClientPacket[] { ClientPacket.FRIEND_QUICK_CHAT_PACKET };
 	}
 	
 }
